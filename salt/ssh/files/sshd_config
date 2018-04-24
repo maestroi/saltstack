@@ -50,7 +50,7 @@ ChallengeResponseAuthentication no
 
 # Change to no to disable tunnelled clear text passwords
 PasswordAuthentication no
-AllowUsers justin
+AllowUsers maestro
 # Kerberos options
 #KerberosAuthentication no
 #KerberosGetAFSToken no
@@ -86,3 +86,11 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
+ClientAliveCountMax 4
+Compression no
+MaxAuthTries 4
+MaxSessions 4
+TCPKeepAlive no
+UsePrivilegeSeparation SANDBOX
+AllowAgentForwarding no
+AllowTcpForwarding no
